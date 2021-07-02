@@ -46,10 +46,10 @@ const PokemonList = (props) => {
 
     return (
         <div className="">
-            <div className="flex items-center justify-center m-2 ">
+            <div className="flex items-center justify-center m-2">
                 Search:
                 <input type="text" className=" border-2 mx-2" onChange={e => setSearch(e.target.value)}/>
-                <button className="border-2 rounded-full bg-green-200" onClick={() => props.history.push(`/pokemon/${search}`)}>Search</button>
+                <button className="border-2 rounded-full bg-green-200 " onClick={() => props.history.push(`/pokemon/${search}`)}>Search</button>
             </div>
             {ShowDates()}
             {
@@ -62,9 +62,9 @@ const PokemonList = (props) => {
                         previousLabel="<"
                         nextLabel=">"
                         containerClassName="flex items-center justify-center p-1 w-10/12 m-auto"
-                        pageClassName="mx-5 border-2 w-7 text-center border-blue-300"
-                        nextClassName=" border-2 w-7 text-center border-blue-300"
-                        previousClassName=" border-2 w-7 text-center border-blue-300"
+                        pageClassName="mx-5 border-2 w-7 text-center border-blue-300 hover:bg-blue-300 "
+                        nextClassName=" border-2 w-7 text-center border-blue-300 hover:bg-blue-300"
+                        previousClassName=" border-2 w-7 text-center border-blue-300 hover:bg-blue-300"
                     />
                 )
             }
