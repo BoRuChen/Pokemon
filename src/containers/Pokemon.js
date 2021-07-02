@@ -18,15 +18,15 @@ const Pokemon = (props) => {
     const showData = () => {
         if (!_.isEmpty(pokemon.data[pokemonName])) {
             const pokemonData = pokemon.data[pokemonName]
-            return <div className="flex justify-between bg-gray-300 p-3">
-                <div className="flex items-center flex-wrap w-1/5 bg-red-100 rounded-xl p-2">
+            return <div className="flex md:justify-between bg-gray-300 p-3 flex-wrap justify-center">
+                <div className="m-1 flex items-center flex-wrap bg-red-100 rounded-xl p-2 w-4/5 md:w-1/5 justify-center">
                     <h1 className="w-screen">Spires</h1>
-                    <img src={pokemonData.sprites.front_default} alt="" />
-                    <img src={pokemonData.sprites.back_default} alt="" />
-                    <img src={pokemonData.sprites.front_shiny} alt="" />
-                    <img src={pokemonData.sprites.back_shiny} alt="" />
+                    <img src={pokemonData.sprites.front_default} alt="" className="w-1/2" />
+                    <img src={pokemonData.sprites.back_default} alt="" className="w-1/2"/>
+                    <img src={pokemonData.sprites.front_shiny} alt="" className="w-1/2"/>
+                    <img src={pokemonData.sprites.back_shiny} alt="" className="w-1/2"/>
                 </div>
-                <div className="w-2/5 bg-red-100 rounded-xl p-2">
+                <div className="m-1 w-4/5 bg-red-100 rounded-xl p-2 md:w-2/5">
                     <h1>Status</h1>
                     {
                         pokemonData.stats.map(el => {
@@ -34,7 +34,7 @@ const Pokemon = (props) => {
                         })
                     }
                 </div>
-                <div className="w-1/5 bg-red-100 rounded-xl p-2">
+                <div className="m-1 w-4/5 bg-red-100 rounded-xl p-2 md:w-1/5">
                     <h1>Abilities</h1>
                     {
                         pokemonData.abilities.map(el => {
